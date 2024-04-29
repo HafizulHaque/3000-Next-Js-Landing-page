@@ -3,6 +3,8 @@
 import React, { useState } from 'react'
 import { ArrowRight, ArrowLeft } from 'lucide-react'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
+import Slider, { Settings } from "react-slick";
+
 import { Navigation } from 'swiper/modules'
 // Import Swiper styles
 import 'swiper/css'
@@ -55,6 +57,17 @@ const LatestWorks = () => {
     last: false
   })
 
+  let sliderSettings: Settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    dots: false
+    
+  }
+
 
   return (
     <section className='p-4 bg-offWhite'>
@@ -64,15 +77,15 @@ const LatestWorks = () => {
         {/* arrow icons */}
         <div className='px-4 py-8 flex gap-4'>
           <div 
-            className={`prev-btn p-3 ${!currentSlide.first ? 'rounded-full hover:bg-white text-lightDark hover:text-orange drop-shadow-xl':''}`}>
+            className={`prev-btn p-3 ${!currentSlide.first ? 'rounded-full hover:bg-white text-lightDark hover:text-orange drop-shadow-xl':'text-lightDark450'}`}>
             <ArrowLeft/>
           </div>
           <div 
-            className={`next-btn p-3 ${!currentSlide.last ? 'rounded-full hover:bg-white text-lightDark hover:text-orange drop-shadow-xl':''}`}>
+            className={`next-btn p-3 ${!currentSlide.last ? 'rounded-full hover:bg-white text-lightDark hover:text-orange drop-shadow-xl':'text-lightDark/40'}`}>
             <ArrowRight/>
           </div>
         </div>
-        <Swiper 
+        {/* <Swiper 
           modules={[Navigation]} 
           navigation={{ prevEl: ".prev-btn", nextEl: ".next-btn" }}
           spaceBetween={50}
@@ -88,26 +101,27 @@ const LatestWorks = () => {
             setCurrentSlide({ first, last })
             // setCurrentSlideHeight(sw.slides[realIndex].offsetHeight)
             // console.log(sw.slides[realIndex].offsetHeight)
-          }}>
+          }}> */}
+
+        {/* </Swiper> */}
+        <Slider {...sliderSettings}>
           {slides.map(slide => (
-            <SwiperSlide key={slide.id}>
-                <div>
-                  <div className='relative'>
-                    <img src={`/images/${slide.imgSrc}`} alt={`slide-${slide.id}`} className='w-full'/>
-                    <div className='absolute top-4 left-4 flex gap-1'>
-                      {slide.contribution.map((contb, index) => (
-                        <div key={index} className='bg-white px-2 py-1 capitalize'>{contb}</div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className='px-6 py-4'>
-                    <p className='text-2xl'>{slide.title}</p>
-                    <a href='#' className='text-lg text-orange hover:text-orange/75'>Explore</a>
-                  </div>
+            <div key={slide.id} className='p-4'>
+              <div className='relative'>
+                <img src={`/images/${slide.imgSrc}`} alt={`slide-${slide.id}`} className='w-full'/>
+                <div className='absolute top-4 left-4 flex gap-1'>
+                  {slide.contribution.map((contb, index) => (
+                    <div key={index} className='bg-white px-2 py-1 capitalize'>{contb}</div>
+                  ))}
                 </div>
-            </SwiperSlide>
+              </div>
+              <div className='px-6 py-4'>
+                <p className='text-2xl'>{slide.title}</p>
+                <a href='#' className='text-lg text-orange hover:text-orange/75'>Explore</a>
+              </div>
+            </div>
           ))}
-        </Swiper>
+        </Slider>
       </div>
     </section>
   )

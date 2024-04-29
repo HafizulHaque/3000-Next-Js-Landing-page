@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-// import { formular } from "./fonts";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
