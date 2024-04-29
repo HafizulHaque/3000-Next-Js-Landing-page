@@ -55,22 +55,25 @@ const MyClients = () => {
           showIndicators={false}
           showStatus={false}
           selectedItem={0}
+          dynamicHeight={true}
         >
           {testimonials.map(testimonial => (
             <div key={testimonial.id} className='bg-offWhite p-4'>
-              <div className='py-2'>
-                <p className='text-left text-slate-700 text-xl font-light leading-7 line-clamp-3'>{testimonial.testimonialText}</p>
-              </div>
-              <div className='flex items-center py-4'>
-                <div>
-                  <img 
-                    src={`/images/${testimonial.clientImgUrl}`} 
-                    alt='client image' 
-                    className='w-[64px] h-[64px] rounded-full'/>
+              <div>
+                <div className='py-2'>
+                  <p className='text-left text-slate-700 text-xl font-light leading-7'>{testimonial.testimonialText}</p>
                 </div>
-                <div className='grow text-left pl-4'>
-                  <h4 className='text-orange/75 text-xl font-medium'>{testimonial.clientName}</h4>
-                  <p>Client</p>
+                <div className='flex items-center py-4'>
+                  <div>
+                    <img 
+                      src={`/images/${testimonial.clientImgUrl}`} 
+                      alt='client image' 
+                      className='w-[64px] h-[64px] rounded-full'/>
+                  </div>
+                  <div className='grow text-left pl-4'>
+                    <h4 className='text-orange/75 text-xl font-medium'>{testimonial.clientName}</h4>
+                    <p>Client</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -93,8 +96,8 @@ const MyClients = () => {
       </div>
 
       <div>
-        <h2 className='text-2xl font-bold py-4 text-center'>My Clients</h2>
-        <p className='py-2 leading-8 text-gray-600 text-center'>Read the testimonials submitted by my clients and partners. You can fully trust their opinions on my solutions.</p>
+        <h2 className='text-3xl font-black py-4 text-center'>My Clients</h2>
+        <p className='py-2 leading-8 text-lg text-gray-500 text-center'>Read the testimonials submitted by my clients and partners. You can fully trust their opinions on my solutions.</p>
         <div className='pt-8 pb-2 flex flex-col gap-6 items-center'>
           <div className='w-full'>
           <img src={`/images/logo-01-86x36.png`} alt="clinet logo" className='h-[32px] w-auto mx-auto'/>

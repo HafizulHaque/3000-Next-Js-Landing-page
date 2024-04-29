@@ -28,13 +28,15 @@ const blogs = [
 const MyBlog = () => {
   return (
     <section className='pt-8'>
-      <h2 className='text-2xl font-bold py-4 text-center px-4'>My Blog</h2>
+      <h2 className='text-3xl font-black py-4 text-center px-4'>My Blog</h2>
       {blogs.map(blog => (
-        <div className='relative p-4 my-8'>
-            <article key={blog.id}>
-              <img src={`/images/${blog.imgUrl}`} alt='blogpost image' className='w-full'/>
+        <div key={blog.id} className='relative p-4 my-8'>
+            <article>
+              <div className='pb-4'>
+                <img src={`/images/${blog.imgUrl}`} alt='blogpost image' className='w-full'/>
+              </div>
               <p className='text-lg text-gray-500 italic py-2'>{blog.publishDate}</p>
-              <h3 className='text-xl font-medium mb-3 hover:text-orange'>{blog.title}</h3>
+              <h3 className='text-[1.35rem] mb-3 hover:text-orange'>{blog.title}</h3>
               <p className='line-clamp-3 text-slate-600 leading-7'>{blog.details}</p>
             </article>
             <div className='absolute top-0 right-0 w-1/2 aspect-square border-y border-l border-orange/40 z-[-1]'>

@@ -5,16 +5,16 @@ const MyServices = () => {
   return (
   <section className='flex flex-col divide-y-[1px] divide-slate-600'>
     <div className='flex flex-col justify-center items-center p-12 gap-2 bg-lightDark hover:bg-lightDark/95 group'>
-      <Package strokeWidth={1.5} className='text-slate-700 group-hover:text-cream'/>
-      <h3 className='text-xl font-semibold text-white group-hover:text-orange'>Branding</h3>
+      <Package strokeWidth={1.5} size={32} className='text-slate-700 group-hover:text-cream'/>
+      <h3 className='text-2xl text-white group-hover:text-orange'>Branding</h3>
     </div>
     <div className='flex flex-col justify-center items-center p-12 gap-2 bg-lightDark hover:bg-lightDark/95 group'>
-      <Droplet strokeWidth={1.5} className='text-slate-700 group-hover:text-cream'/>
-      <h3 className='text-xl font-semibold text-white group-hover:text-orange'>UI/UX Design</h3>
+      <Droplet strokeWidth={1.5} size={32} className='text-slate-700 group-hover:text-cream'/>
+      <h3 className='text-2xl text-white group-hover:text-orange'>UI/UX Design</h3>
     </div>
     <div className='flex flex-col justify-center items-center p-12 gap-2 bg-lightDark hover:bg-lightDark/95 group'>
-      <Rocket strokeWidth={1.5} className='text-slate-700 group-hover:text-cream'/>
-      <h3 className='text-xl font-semibold text-white group-hover:text-orange'>Development</h3>
+      <Rocket strokeWidth={1.5} size={32} className='text-slate-700 group-hover:text-cream'/>
+      <h3 className='text-2xl text-white group-hover:text-orange'>Development</h3>
     </div>
   </section>
   )

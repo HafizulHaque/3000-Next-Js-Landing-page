@@ -13,7 +13,10 @@ const config: Config = {
         'orange': '#EE6451',
         'lightDark': '#111235',
         'cream': '#B9E1D7'
-      }
+      },
+      backgroundImage: {
+        'boo': "url('/images/Boooo.svg')"
+      },
     },
   },
   plugins: [],

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='bg-lightDark text-white px-4 py-8'>
+    <footer className='bg-lightDark text-white px-4 py-12'>
       <div className='w-1/3'>
         <a href="/">
           <img src="/images/logo.svg" alt="company logo"/>
@@ -11,9 +11,9 @@ const Footer = () => {
       <div className='my-6 flex'>
         <input 
           type='email' 
-          className='grow outline-none p-3 bg-offWhite text-lightDark border-0' 
+          className='grow outline-none p-4 bg-offWhite text-lightDark border-0' 
           placeholder='E-mail'/>
-        <button className='p-3 bg-cream hover:bg-orange text-lightDark hover:text-white font-semibold uppercase border-0'>Subscribe</button>
+        <button className='p-4 bg-cream hover:bg-orange text-lightDark hover:text-white font-semibold uppercase border-0'>Subscribe</button>
       </div>
       <div className='py-4 grid grid-cols-2 gap-x-4 gap-y-6'>
         <div>
