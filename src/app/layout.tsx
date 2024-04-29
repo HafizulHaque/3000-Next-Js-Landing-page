@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { formular } from "./fonts";
+// import { formular } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={formular.className}>{children}</body>
+      {/* <body className={formular.className}>{children}</body> */}
+      <body>{children}</body>
     </html>
   );
 }

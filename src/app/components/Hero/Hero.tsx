@@ -9,7 +9,7 @@ const Hero = () => {
       
       {/* div-1 */}
       <div className='text-center pt-4 pb-8'>
-        <h2 className='py-2 text-3xl'>Hi! <span className='font-bold'>I'm<br/>a designer</span></h2>
+        <h2 className='py-2 text-3xl'>Hi! <span className='font-black'>I'm<span className='block'>a designer</span></span></h2>
 				<p className='px-8 pt-2 pb-8 leading-7'>ready to work on the next big project for your business</p>
 				<button className='bg-orange text-white px-8 py-4 cursor-pointer uppercase'>Get in touch</button>
       </div>
