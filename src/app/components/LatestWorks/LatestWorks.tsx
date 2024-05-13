@@ -50,8 +50,6 @@ const slides = [
 
 const LatestWorks = () => {
 
-  const swiper = useSwiper()
-  const [currentSlideHeight, setCurrentSlideHeight] = useState(0)
   const [currentSlide, setCurrentSlide] = useState({
     first: true,
     last: false
@@ -64,7 +62,6 @@ const LatestWorks = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    dots: false
     
   }
 
@@ -85,25 +82,6 @@ const LatestWorks = () => {
             <ArrowRight/>
           </div>
         </div>
-        {/* <Swiper 
-          modules={[Navigation]} 
-          navigation={{ prevEl: ".prev-btn", nextEl: ".next-btn" }}
-          spaceBetween={50}
-          slidesPerView={1}
-          // className='border border-red-500'
-          // style={{height: 100}}
-          onSlideChange={sw => {
-            const { realIndex } = sw;
-            let first = false;
-            let last = false;
-            if(realIndex === 0) first = true;
-            if(realIndex === slides.length -1) last = true;
-            setCurrentSlide({ first, last })
-            // setCurrentSlideHeight(sw.slides[realIndex].offsetHeight)
-            // console.log(sw.slides[realIndex].offsetHeight)
-          }}> */}
-
-        {/* </Swiper> */}
         <Slider {...sliderSettings}>
           {slides.map(slide => (
             <div key={slide.id} className='p-4'>
