@@ -6,7 +6,7 @@ import { Menu, EllipsisVertical, MessageCircleMore } from 'lucide-react'
 const MobileHeader = () => {
 
   return (
-    <header className='w-screen h-[60px] fixed top-0 left-0 right-0 z-50'>
+    <header className='w-full h-[60px] fixed top-0 left-0 right-0 z-50'>
       <div className='flex justify-between items-center p-4 m-0 bg-white text-lightDark shadow'>
         <div>
           <Menu size={40}/>
